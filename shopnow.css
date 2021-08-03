@@ -1,0 +1,270 @@
+/* css resat */
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smoothS;
+}
+/* css varibles */
+:root{
+    --nevbar-hight:60px;
+}
+/* styling for my nevbar */
+#nevbar{
+    display: flex;
+    align-items: center;
+    /* position: relative; */
+    position:sticky;
+    top:0%;
+    z-index: 1000;
+}
+#nevbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;/*because of zindex our test getting on */
+    opacity: 0.4;
+    top: 0px;
+    left: 0px;
+}
+/* styling for nevbar:logo */
+#logo{
+    margin: 0px 15px;
+}
+/* styling for nevbar : logo : img */
+#logo img{
+    height: 40px;
+    margin: 5px 5px;
+}
+/* styling for li */
+#nevbar ul{
+    display: flex;
+    /* font-family: 'Barlow Condensed', sans-serif; */
+    font-family: 'Orelega One', cursive;
+}
+#nevbar ul li{
+    list-style: none;
+    font-size: 1rem;
+    /* margin: 1px 30px */
+    ;
+}
+#nevbar ul li a{
+    color: white;
+    text-decoration: none;
+    display: block;/* difolt display og a is inline*/
+    padding: 5px 5px;
+    border-radius: 20px;
+}
+#nevbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+/* styling to the home */
+#home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 200px;
+    height: 385px;
+
+}
+#home::before{
+    content: "";
+    background:url('lily-banse--YHSwy6uqvk-unsplash.jpg')no-repeat center center/cover;
+    position: absolute;
+    height: 440px;
+    width: 100%;
+    z-index: -1;/*because of zindex our test getting on */
+    opacity: 0.78;
+    top: 0px;
+    left: 0px;
+}
+#home h1{
+    color: white;
+    text-align: center;
+
+}
+
+.p-section{
+    color: white;
+    text-align: center;
+    padding: 5px;
+    font-size: 1.2rem;
+    /* font-family: 'Barlow Condensed', sans-serif; */
+    font-family: 'Orelega One', cursive;
+}
+/* styling services */
+#services{
+    display: flex;
+    margin: 6px -9px;
+}
+#services .box{
+    border: 2px solid brown;
+    padding: 25px;
+    margin: 10px;
+    border-radius: 25px;
+    background-color: rgb(226, 221, 221);
+}
+#services .box img{
+    height: 150px;
+    display: block;
+    margin: auto;/* when there is no display block then margin:ato didnt work*/
+}
+/* styling clint section */
+#clint_section{
+    height: 355px;
+    position: relative;
+
+}
+#clint_section::before{
+    content: "";
+    position: absolute;
+    background: url('alex-plesovskich-wMA3PMrHksU-unsplash.jpg')no-repeat center center/cover;
+    height: 291px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.7;
+
+}
+#clint{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 183px;
+}
+.clint_item{
+    padding: 30px;
+}
+/* styling contact section */
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('../img/pawel-czerwinski--0xCCPIbl3M-unsplash.jpg')no-repeat center center/cover;
+}
+#contact-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+/* #contact-box form{
+    width: 50%;
+} */
+#contact-box input,#contact-box textarea{
+    padding: 5px 20px;
+    margin: 5px;
+    font-size: 1rem;
+    border-radius: 20px;
+    /* background-color: blue; */
+}
+#contact-box label{
+    font-size: 1.2rem;
+    font-family: 'Orelega One', cursive;
+
+}
+/* styling footer */
+footer{
+    background-color: black;
+    color: white;
+}
+/* utility classes */
+.h-primary{
+    padding: 20px;
+    font-size: 2.5rem;
+   
+   
+    font-family: 'Playfair Display', serif;
+}
+.h-secondary{
+    padding: 20px;
+    font-size: 1.5rem;
+  
+  
+    font-family: 'Playfair Display', serif;
+
+}    
+.btn{
+    background-color: coral;
+    border: 2px solid white;
+    padding: 3px 20px;
+    margin: 15px;
+    font-size: 1.2rem;
+    border-radius: 15px;
+    cursor: pointer;
+    color: white;
+}
+.btn:hover{
+    background-color: chocolate;
+    font-size: 1.4rem;
+}
+.center{
+    text-align: center;
+    font-family: 'Orelega One', cursive; 
+}
+
+@media(max-width:1100px) {
+    #nevbar{
+        flex-direction: column;
+    
+    }
+    /* #nevbar ul li{
+        margin: 1px 5px;
+    } */
+    #nevbar ul a{
+        font-size: 1rem;
+        padding: 0px 7px;
+    }
+    /* home */
+    #home{
+        height: 500px;
+        padding: 20px 0px;
+    
+    }
+    #home::before{
+        height: 600px;
+    }
+    #home p{
+        font-size: 1rem;
+    }
+    /* section sevrvises */
+    #services{
+        flex-direction: column;
+    
+    }
+    /* section clint */
+    /* #services{
+    
+    } */
+    /* clint section */
+    #clint{
+        flex-wrap: wrap;
+    }
+    #clint img{
+        height: auto;
+        width: 50px;
+        /* padding: 3px 20px; */
+    }
+    /* contact us section */
+    /* #contact{
+    
+    } */
+    /* utility classes */
+    .h-primary{
+        font-size: 25px;
+    }
+    .btn{
+        padding:5px 10px;
+    }
+}
